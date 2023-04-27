@@ -111,6 +111,14 @@ function Page() {
     }
   }, [porkyNumber, connected]);
 
+  const download = () => {
+    const a = document.createElement("a");
+    a.href = renderedImage;
+    a.innerText = `Porky #${porkyNumber}`;
+    a.download = `Porky #${porkyNumber}`;
+    a.click();
+  };
+
   return (
     <div>
       <button onClick={() => router.push("/")}>return</button>
@@ -151,7 +159,7 @@ function Page() {
                                   selectedValues.find(
                                     (obj) => obj.traitName === traitName
                                   )?.variant === str
-                                    ? "3px solid gray"
+                                    ? "3px solid white"
                                     : "",
                               }}
                               onClick={() =>
@@ -175,12 +183,17 @@ function Page() {
               )}
             </div>
 
-            <button
-              disabled={loading}
-              onClick={() => renderImage(porkyNumber, selectedValues)}
-            >
-              Render
-            </button>
+            <div style={{ display: "flex", justifyContent: "space-evenly" }}>
+              <button
+                disabled={loading}
+                onClick={() => renderImage(porkyNumber, selectedValues)}
+              >
+                Render
+              </button>
+              <button disabled={loading} onClick={() => download()}>
+                Save
+              </button>
+            </div>
           </div>
         </div>
 
