@@ -44,6 +44,7 @@ const SelectPorky = () => {
                 onClick={() => router.push(`/${assetName.split("#")[1]}`)}
               >
                 <img
+                  style={{ borderRadius: "20px" }}
                   src={assetImage}
                   alt={assetName}
                   width={150}

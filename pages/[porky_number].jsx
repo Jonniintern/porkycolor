@@ -121,7 +121,7 @@ function Page() {
 
   return (
     <div>
-      <button onClick={() => router.push("/")}>return</button>
+      <button onClick={() => router.push("/")}>select</button>
       <div className="generatorContainer">
         <div className="pickerContainer" style={{ display: "flex" }}>
           <img
@@ -195,10 +195,6 @@ function Page() {
               </button>
             </div>
           </div>
-        </div>
-
-        <div className="infoBox">
-          <p className="infoTitle">RIGHT KLIKK SAYVE</p>
         </div>
       </div>
     </div>

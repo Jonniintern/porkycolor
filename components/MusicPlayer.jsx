@@ -10,6 +10,10 @@ const songs = [
   "/media/music/01. Porky Walk.mp3",
   "/media/music/02. Porky AI.mp3",
   "/media/music/03. Wen Nite.mp3",
+  "/media/music/04. Dat Shit.mp3",
+  "/media/music/05. We Friends.mp3",
+  "/media/music/06. Sexy Mfr.mp3",
+  "/media/music/07. Porky Add2.mp3",
   //   '/media/music/02. Welcome To The Club.wav',
   //   '/media/music/03. FoxVerse.wav',
   //   '/media/music/04. Riding Around Town.wav',
@@ -113,7 +117,8 @@ const MusicPlayer = () => {
 
   return (
     <div className="musicContainer">
-      <p>Music Radiu</p>
+      {/* <img className="radioImg" src="./images/Radio_img.png" alt="" /> */}
+      <p>MUSIG PLAYUR</p>
       <div className="musicBox">
         {songs.length > 1 ? (
           <button onClick={() => playPrev()} className="prevBtn">

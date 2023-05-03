@@ -18,32 +18,41 @@ const App = ({ Component, pageProps }) => {
       </Head>
 
       <Toaster />
-
-      <header>
+      <div className="body">
+        <header>
+          <img src="/images/EDN_logo.png" height={200} />
+        </header>
         <MusicPlayer />
-        <img src="/images/EDN_logo.png" height={250} />
-      </header>
 
-      <main style={{ minHeight: "70vh" }}>
-        <WalletProvider>
-          <Component {...pageProps} />
-        </WalletProvider>
-      </main>
+        <main style={{ minHeight: "50vh" }}>
+          <WalletProvider>
+            <Component {...pageProps} />
+          </WalletProvider>
+        </main>
 
-      <footer>
-        <p>
-          Questions? -{" "}
-          <Link
-            href="https://discord.gg/9dgKAQn83a"
-            target="_blank"
-            rel="noopener noreferrer"
-            style={{ color: "unset" }}
-          >
-            Discord
-          </Link>
-        </p>
+        <Link
+          href="https://porkyisland.com"
+          target="_blank"
+          rel="noopener noreferrer"
+          style={{ color: "unset" }}
+        >
+          <img className="piLink" src="./images/PI_logo_com.png" alt="" />
+        </Link>
+        <footer>
+          <p>
+            Questions? -{" "}
+            <Link
+              href="https://discord.gg/9dgKAQn83a"
+              target="_blank"
+              rel="noopener noreferrer"
+              style={{ color: "unset" }}
+            >
+              Discord
+            </Link>
+          </p>
+        </footer>
         <p>&copy; Porky Island {new Date().getFullYear()}</p>
-      </footer>
+      </div>
     </Fragment>
   );
 };
