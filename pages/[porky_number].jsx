@@ -121,8 +121,20 @@ function Page() {
 
   return (
     <div>
-      <button onClick={() => router.push("/")}>select</button>
       <div className="generatorContainer">
+        <button
+          style={{
+            backgroundColor: "black",
+            color: "white",
+            width: "120px",
+            textAlign: "center",
+            fontSize: "12px",
+            margin: "5px",
+          }}
+          onClick={() => router.push("/")}
+        >
+          return
+        </button>
         <div className="pickerContainer" style={{ display: "flex" }}>
           <img
             className="pickedImage"
@@ -184,12 +196,17 @@ function Page() {
 
             <div style={{ display: "flex", justifyContent: "space-evenly" }}>
               <button
+                className="rndrBtn"
                 disabled={loading}
                 onClick={() => renderImage(porkyNumber, selectedValues)}
               >
                 Render
               </button>
-              <button disabled={loading} onClick={() => download()}>
+              <button
+                className="rndrBtn"
+                disabled={loading}
+                onClick={() => download()}
+              >
                 Save
               </button>
             </div>
