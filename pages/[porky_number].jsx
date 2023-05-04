@@ -125,10 +125,9 @@ function Page() {
       <div className="generatorContainer">
         <div className="pickerContainer" style={{ display: "flex" }}>
           <img
+            className="pickedImage"
             src={renderedImage || thisPorky.assetImage}
             alt={porkyNumber}
-            width={500}
-            height={500}
             style={{ backgroundColor: "black" }}
           />
 

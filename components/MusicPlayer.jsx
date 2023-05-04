@@ -14,15 +14,6 @@ const songs = [
   "/media/music/05. We Friends.mp3",
   "/media/music/06. Sexy Mfr.mp3",
   "/media/music/07. Porky Add2.mp3",
-  //   '/media/music/02. Welcome To The Club.wav',
-  //   '/media/music/03. FoxVerse.wav',
-  //   '/media/music/04. Riding Around Town.wav',
-  //   '/media/music/05. Motorcycle Club.wav',
-  //   '/media/music/06. New Wave.wav',
-  //   '/media/music/07. Moving Melodies (Interlude).wav',
-  //   '/media/music/08. Foxy Mami.wav',
-  //   '/media/music/09. Out The Cage.wav',
-  //   '/media/music/10. No Chains.wav',
 ].map((str) => str.replaceAll(" ", "%20"));
 
 const MusicPlayer = () => {

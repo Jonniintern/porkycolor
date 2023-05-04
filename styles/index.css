@@ -167,9 +167,22 @@ footer {
 }
 
 .pickerContainer {
+  flex-wrap: wrap;
   background-color: #24242475;
   padding: 30px;
   border-radius: 8px;
+}
+
+.pickedImage {
+  max-width: 500px;
+  max-height: 500px;
+}
+
+@media only screen and (max-width: 500px) {
+  .pickedImage {
+    max-width: 320px;
+    max-height: 320px;
+  }
 }
 
 .colorPicker {
